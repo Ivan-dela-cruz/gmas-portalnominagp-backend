@@ -1702,7 +1702,10 @@
           "Serilog.Sinks.File": "6.0.0"
         },
         "runtime": {
-          "NominaGP.Services.Application.dll": {}
+          "NominaGP.Services.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "NominaGP.Services.Application.dll": {}
@@ -1717,7 +1720,10 @@
           "Serilog.Sinks.File": "6.0.0"
         },
         "runtime": {
-          "NominaGP.Services.Core.dll": {}
+          "NominaGP.Services.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "NominaGP.Services.Core.dll": {}
@@ -1734,7 +1740,10 @@
           "Serilog.Sinks.File": "6.0.0"
         },
         "runtime": {
-          "NominaGP.Services.Domain.dll": {}
+          "NominaGP.Services.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "NominaGP.Services.Domain.dll": {}
@@ -1755,7 +1764,10 @@
           "Serilog.Sinks.File": "6.0.0"
         },
         "runtime": {
-          "NominaGP.Services.Infrastructure.dll": {}
+          "NominaGP.Services.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "NominaGP.Services.Infrastructure.dll": {}
