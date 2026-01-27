@@ -39,9 +39,11 @@
           "Microsoft.EntityFrameworkCore": "9.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.2",
+          "Microsoft.Playwright": "1.57.0",
           "Newtonsoft.Json": "13.0.3",
           "NominaGP.Services.Core": "1.0.0",
           "NominaGP.Services.Domain": "1.0.0",
+          "NominaGP.Services.FileStorageManager": "1.0.0",
           "RazorLight": "2.3.1",
           "Serilog.AspNetCore": "9.0.0",
           "Serilog.Enrichers.AspNetCore": "1.0.0",
@@ -183,7 +185,7 @@
           "System.Collections.Immutable.Reference": "8.0.0.0",
           "System.Collections.NonGeneric": "8.0.0.0",
           "System.Collections.Specialized": "8.0.0.0",
-          "System.ComponentModel.Annotations": "8.0.0.0",
+          "System.ComponentModel.Annotations.Reference": "8.0.0.0",
           "System.ComponentModel.DataAnnotations": "4.0.0.0",
           "System.ComponentModel": "8.0.0.0",
           "System.ComponentModel.EventBasedAsync": "8.0.0.0",
@@ -352,6 +354,31 @@
         },
         "compile": {
           "lib/net8.0/AutoMapper.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.303.9": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.303.9"
+          }
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.S3/3.7.307.10": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.303.9"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.307.10"
+          }
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.S3.dll": {}
         }
       },
       "Azure.Core/1.38.0": {
@@ -1111,6 +1138,22 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.Playwright/1.57.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "System.ComponentModel.Annotations": "5.0.0",
+          "System.Text.Json": "9.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Playwright.dll": {
+            "assemblyVersion": "1.57.0.0",
+            "fileVersion": "1.57.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Playwright.dll": {}
+        }
+      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
@@ -1348,6 +1391,7 @@
       },
       "System.CodeDom/6.0.0": {},
       "System.Collections.Immutable/7.0.0": {},
+      "System.ComponentModel.Annotations/5.0.0": {},
       "System.Composition/7.0.0": {
         "dependencies": {
           "System.Composition.AttributedModel": "7.0.0",
@@ -1633,6 +1677,7 @@
         "dependencies": {
           "AutoMapper": "14.0.0",
           "Newtonsoft.Json": "13.0.3",
+          "NominaGP.Services.FileStorageManager": "1.0.0",
           "Serilog.AspNetCore": "9.0.0",
           "Serilog.Enrichers.AspNetCore": "1.0.0",
           "Serilog.Formatting.Compact": "3.0.0",
@@ -1647,6 +1692,21 @@
         },
         "compile": {
           "NominaGP.Services.Domain.dll": {}
+        }
+      },
+      "NominaGP.Services.FileStorageManager/1.0.0": {
+        "dependencies": {
+          "AWSSDK.S3": "3.7.307.10",
+          "NominaGP.Services.Core": "1.0.0"
+        },
+        "runtime": {
+          "NominaGP.Services.FileStorageManager.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "NominaGP.Services.FileStorageManager.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/8.0.0.0": {
@@ -2459,7 +2519,7 @@
         },
         "compileOnly": true
       },
-      "System.ComponentModel.Annotations/8.0.0.0": {
+      "System.ComponentModel.Annotations.Reference/8.0.0.0": {
         "compile": {
           "System.ComponentModel.Annotations.dll": {}
         },
@@ -3368,6 +3428,20 @@
       "path": "automapper/14.0.0",
       "hashPath": "automapper.14.0.0.nupkg.sha512"
     },
+    "AWSSDK.Core/3.7.303.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qLR/coErSK0V+vZMHd9833UgNhQOmwNqEPcFiqYrd24a938lpKeO+GVERjNMyInysYwe+wCiOlU8l7BnHnC0Ow==",
+      "path": "awssdk.core/3.7.303.9",
+      "hashPath": "awssdk.core.3.7.303.9.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.307.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-peyaPxQG34gLPFv/nifz2JZKIheNpYuQqvDnCO6jhZZbC4P8znQiEmMiZ5JcvXe9a0JQ3cKACRaUIngQetzSxQ==",
+      "path": "awssdk.s3/3.7.307.10",
+      "hashPath": "awssdk.s3.3.7.307.10.nupkg.sha512"
+    },
     "Azure.Core/1.38.0": {
       "type": "package",
       "serviceable": true,
@@ -3767,6 +3841,13 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
+    "Microsoft.Playwright/1.57.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DJXmZ64wwgakSrVZxsFJS8/epLEfac2Xfij66a0xY/ggfKqHIOeWeRaQQ97qxwA3FdyVwU1nWjAqeZhOZFxYMw==",
+      "path": "microsoft.playwright/1.57.0",
+      "hashPath": "microsoft.playwright.1.57.0.nupkg.sha512"
+    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3899,6 +3980,13 @@
       "sha512": "sha512-dQPcs0U1IKnBdRDBkrCTi1FoajSTBzLcVTpjO4MBCMC7f4pDOIPzgBoX8JjG7X6uZRJ8EBxsi8+DR1JuwjnzOQ==",
       "path": "system.collections.immutable/7.0.0",
       "hashPath": "system.collections.immutable.7.0.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+      "path": "system.componentmodel.annotations/5.0.0",
+      "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
     "System.Composition/7.0.0": {
       "type": "package",
@@ -4123,6 +4211,11 @@
       "sha512": ""
     },
     "NominaGP.Services.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NominaGP.Services.FileStorageManager/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -4802,7 +4895,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.ComponentModel.Annotations/8.0.0.0": {
+    "System.ComponentModel.Annotations.Reference/8.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

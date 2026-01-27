@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "14.0.0",
           "Newtonsoft.Json": "13.0.3",
+          "NominaGP.Services.FileStorageManager": "1.0.0",
           "Serilog.AspNetCore": "9.0.0",
           "Serilog.Enrichers.AspNetCore": "1.0.0",
           "Serilog.Formatting.Compact": "3.0.0",
@@ -28,6 +29,25 @@
           "lib/net8.0/AutoMapper.dll": {
             "assemblyVersion": "14.0.0.0",
             "fileVersion": "14.0.0.0"
+          }
+        }
+      },
+      "AWSSDK.Core/3.7.303.9": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.303.9"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.307.10": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.303.9"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.307.10"
           }
         }
       },
@@ -378,6 +398,33 @@
             "fileVersion": "9.0.24.52809"
           }
         }
+      },
+      "NominaGP.Services.Core/1.0.0": {
+        "dependencies": {
+          "Serilog.AspNetCore": "9.0.0",
+          "Serilog.Enrichers.AspNetCore": "1.0.0",
+          "Serilog.Formatting.Compact": "3.0.0",
+          "Serilog.Sinks.Console": "6.0.0",
+          "Serilog.Sinks.File": "6.0.0"
+        },
+        "runtime": {
+          "NominaGP.Services.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "NominaGP.Services.FileStorageManager/1.0.0": {
+        "dependencies": {
+          "AWSSDK.S3": "3.7.307.10",
+          "NominaGP.Services.Core": "1.0.0"
+        },
+        "runtime": {
+          "NominaGP.Services.FileStorageManager.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -393,6 +440,20 @@
       "sha512": "sha512-OC+1neAPM4oCCqQj3g2GJ2shziNNhOkxmNB9cVS8jtx4JbgmRzLcUOxB9Tsz6cVPHugdkHgCaCrTjjSI0Z5sCQ==",
       "path": "automapper/14.0.0",
       "hashPath": "automapper.14.0.0.nupkg.sha512"
+    },
+    "AWSSDK.Core/3.7.303.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qLR/coErSK0V+vZMHd9833UgNhQOmwNqEPcFiqYrd24a938lpKeO+GVERjNMyInysYwe+wCiOlU8l7BnHnC0Ow==",
+      "path": "awssdk.core/3.7.303.9",
+      "hashPath": "awssdk.core.3.7.303.9.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.307.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-peyaPxQG34gLPFv/nifz2JZKIheNpYuQqvDnCO6jhZZbC4P8znQiEmMiZ5JcvXe9a0JQ3cKACRaUIngQetzSxQ==",
+      "path": "awssdk.s3/3.7.307.10",
+      "hashPath": "awssdk.s3.3.7.307.10.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.0.2": {
       "type": "package",
@@ -631,6 +692,16 @@
       "sha512": "sha512-js7+qAu/9mQvnhA4EfGMZNEzXtJCDxgkgj8ohuxq/Qxv+R56G+ljefhiJHOxTNiw54q8vmABCWUwkMulNdlZ4A==",
       "path": "system.text.json/9.0.0",
       "hashPath": "system.text.json.9.0.0.nupkg.sha512"
+    },
+    "NominaGP.Services.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NominaGP.Services.FileStorageManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
